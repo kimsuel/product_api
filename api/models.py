@@ -20,6 +20,6 @@ class Product(TimeStampedModel):
 
 
 class ShoppingCart(TimeStampedModel):
-    user_id = models.UUIDField(default=uuid.uuid4, editable=False)
+    user_id = models.UUIDField()
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    quantity = models.IntegerField(default=0)
+    quantity = models.IntegerField()
